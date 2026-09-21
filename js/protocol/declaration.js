@@ -181,7 +181,13 @@ export function checkBinding(declaration, context = {}) {
     if (declaration.standard === 'rgbmap-publisher') {
         if (!declaration.ledger_genesis) problems.push('no ledger_genesis');
         // The declaration is signed by the address that writes the anchors.
-        if (declaration.anchor_address && declaration.anchor_address !== address) {
+        //
+        // 🚨 Required, not optional. Leaving it out used to skip this check entirely, so a
+        // declaration signed by any key at all claimed the ledger — which is the one thing
+        // this standard exists to prevent. A publisher whose anchors leave from a changing
+        // address cannot prove the ledger is theirs, and is refused rather than waved through.
+        if (!declaration.anchor_address) problems.push('no anchor_address');
+        else if (declaration.anchor_address !== address) {
             problems.push('the signing address is not the anchor address');
         }
     }

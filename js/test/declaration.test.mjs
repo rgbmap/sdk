@@ -148,3 +148,30 @@ test('a collection cover may not use the artwork allowance', async () => {
     const d = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 0, media: [artwork(1000)] });
     assert.match(checkBinding(d).problems.join(';'), /media role artwork is not one of logo, preview/);
 });
+
+test('a publisher declaration has to name the anchor address', async () => {
+    // 🚨 Omitting it used to skip the address check completely, so any key claimed any ledger
+    // — the one thing this standard exists to prevent. A ledger whose anchors leave from a
+    // changing address cannot prove ownership, and is refused rather than waved through.
+    const base = {
+        standard: 'rgbmap-publisher',
+        standard_version: '0',
+        network: 'mainnet',
+        ledger_genesis: 'a'.repeat(64),
+        api: 'https://example.org/public',
+        anchor_algorithm: 'rgb-anchor-v1',
+        head: { seq: '1', hash: 'b'.repeat(64) },
+    };
+    const mine = signP2WPKH(KEY, '', 'tb').address;
+
+    assert.deepEqual(checkBinding(await signed({ ...base, anchor_address: mine })).problems, []);
+
+    const missing = checkBinding(await signed({ ...base }));
+    assert.ok(missing.problems.includes('no anchor_address'), 'an absent anchor address was accepted');
+
+    const other = checkBinding(await signed({ ...base, anchor_address: 'tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx' }));
+    assert.ok(
+        other.problems.includes('the signing address is not the anchor address'),
+        'a ledger was claimed by a key that does not write its anchors',
+    );
+});
