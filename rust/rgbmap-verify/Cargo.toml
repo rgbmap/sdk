@@ -1,0 +1,16 @@
+[package]
+name = "rgbmap-verify"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Recomputes a published RGBMap archive from the objects alone"
+
+[[bin]]
+name = "rgbmap-verify"
+path = "src/main.rs"
+
+[dependencies]
+rgbmap = { path = "../rgbmap", version = "0.1.0" }
+# NOTE: preserve_order keeps object keys in the order they were written.
+serde_json = { version = "1", features = ["preserve_order"] }
+ureq = { version = "2", features = ["json"] }

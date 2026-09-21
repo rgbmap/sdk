@@ -1,0 +1,35 @@
+{
+  "name": "@rgbmap/sdk",
+  "version": "0.1.0",
+  "description": "Read an RGBMap index, and recompute what it says",
+  "type": "module",
+  "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./protocol/*": "./protocol/*",
+    "./vectors/*": "./vectors/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "protocol",
+    "vectors",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "vectors": "node tools/generate-vectors.mjs",
+    "prepack": "node tools/stage-vectors.mjs",
+    "postpack": "node tools/stage-vectors.mjs --clean"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.0.1"
+  },
+  "devDependencies": {
+    "bip322-js": "^4.0.0",
+    "bs58check": "^4.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+[package]
+name = "rgbmap"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Recompute what an RGBMap index says: the hash chain, the commitments and declaration signatures"
+repository = "https://rgbmap.org"
+
+[dependencies]
+sha2 = "0.10"
+# NOTE: preserve_order keeps object keys in the order they were written; a record's public
+# segment is hashed as the bytes it arrived in, never re-serialised.
+serde_json = { version = "1", features = ["preserve_order"] }
+# 🚨 Pinned exactly. This is a 0.0.x crate, so a patch release may change the API or the
+# behaviour, and the behaviour here is an authentication decision. Re-run the vectors before
+# moving it.
+bip322 = "=0.0.12"

@@ -1,0 +1,192 @@
+{
+  "cases": [
+    {
+      "name": "empty object",
+      "value": {},
+      "ok": true,
+      "canonical": "{}"
+    },
+    {
+      "name": "empty array",
+      "value": [],
+      "ok": true,
+      "canonical": "[]"
+    },
+    {
+      "name": "null",
+      "value": null,
+      "ok": true,
+      "canonical": "null"
+    },
+    {
+      "name": "booleans",
+      "value": {
+        "t": true,
+        "f": false
+      },
+      "ok": true,
+      "canonical": "{\"f\":false,\"t\":true}"
+    },
+    {
+      "name": "key ordering",
+      "value": {
+        "2": 5,
+        "10": 4,
+        "b": 1,
+        "a": 2,
+        "C": 3
+      },
+      "ok": true,
+      "canonical": "{\"10\":4,\"2\":5,\"C\":3,\"a\":2,\"b\":1}"
+    },
+    {
+      "name": "nested ordering",
+      "value": {
+        "z": {
+          "y": 1,
+          "x": 2
+        },
+        "a": [
+          {
+            "q": 1,
+            "p": 2
+          }
+        ]
+      },
+      "ok": true,
+      "canonical": "{\"a\":[{\"p\":2,\"q\":1}],\"z\":{\"x\":2,\"y\":1}}"
+    },
+    {
+      "name": "amounts as decimal strings",
+      "value": {
+        "amount": "100000000000000000"
+      },
+      "ok": true,
+      "canonical": "{\"amount\":\"100000000000000000\"}"
+    },
+    {
+      "name": "safe integer boundary",
+      "value": {
+        "n": 9007199254740991
+      },
+      "ok": true,
+      "canonical": "{\"n\":9007199254740991}"
+    },
+    {
+      "name": "negative safe integer",
+      "value": {
+        "n": -9007199254740991
+      },
+      "ok": true,
+      "canonical": "{\"n\":-9007199254740991}"
+    },
+    {
+      "name": "zero",
+      "value": {
+        "a": 0
+      },
+      "ok": true,
+      "canonical": "{\"a\":0}"
+    },
+    {
+      "name": "quotes and backslashes",
+      "value": {
+        "s": "he said \"hi\" \\ ok"
+      },
+      "ok": true,
+      "canonical": "{\"s\":\"he said \\\"hi\\\" \\\\ ok\"}"
+    },
+    {
+      "name": "control characters",
+      "value": {
+        "s": "a\bb\tc\nd\fe\rf\u0001g"
+      },
+      "ok": true,
+      "canonical": "{\"s\":\"a\\bb\\tc\\nd\\fe\\rf\\u0001g\"}"
+    },
+    {
+      "name": "non-ASCII stays unescaped",
+      "value": {
+        "s": "\u4e2d\u6587 é €"
+      },
+      "ok": true,
+      "canonical": "{\"s\":\"\u4e2d\u6587 é €\"}"
+    },
+    {
+      "name": "emoji outside the BMP",
+      "value": {
+        "s": "🚀💰"
+      },
+      "ok": true,
+      "canonical": "{\"s\":\"🚀💰\"}"
+    },
+    {
+      "name": "empty and blank strings",
+      "value": {
+        "a": "",
+        "b": " "
+      },
+      "ok": true,
+      "canonical": "{\"a\":\"\",\"b\":\" \"}"
+    },
+    {
+      "name": "slash is not escaped",
+      "value": {
+        "s": "a/b"
+      },
+      "ok": true,
+      "canonical": "{\"s\":\"a/b\"}"
+    },
+    {
+      "name": "array of mixed types",
+      "value": [
+        1,
+        "2",
+        true,
+        null,
+        {
+          "a": 1
+        },
+        []
+      ],
+      "ok": true,
+      "canonical": "[1,\"2\",true,null,{\"a\":1},[]]"
+    },
+    {
+      "name": "legs, the real shape",
+      "value": {
+        "legs": [
+          {
+            "account": "acct:7f3a",
+            "assetId": "sats",
+            "delta": "-1000"
+          },
+          {
+            "account": "@platform",
+            "assetId": "sats",
+            "delta": "1000"
+          }
+        ],
+        "poolId": "rgb:AbC-123"
+      },
+      "ok": true,
+      "canonical": "{\"legs\":[{\"account\":\"acct:7f3a\",\"assetId\":\"sats\",\"delta\":\"-1000\"},{\"account\":\"@platform\",\"assetId\":\"sats\",\"delta\":\"1000\"}],\"poolId\":\"rgb:AbC-123\"}"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "float",
+      "value": {
+        "n": 1.5
+      },
+      "throws": true
+    },
+    {
+      "name": "integer past 2^53",
+      "value": {
+        "n": 9007199254740992
+      },
+      "throws": true
+    }
+  ]
+}
