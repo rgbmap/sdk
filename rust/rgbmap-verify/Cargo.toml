@@ -1,16 +1,22 @@
 [package]
 name = "rgbmap-verify"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "Recomputes a published RGBMap archive from the objects alone"
+repository = "https://github.com/rgbmap/sdk"
+homepage = "https://rgbmap.org"
+documentation = "https://rgbmap.org/docs/verification"
+readme = "README.md"
+keywords = ["rgb", "bitcoin", "verification", "cli"]
+categories = ["command-line-utilities", "cryptography::cryptocurrencies"]
 
 [[bin]]
 name = "rgbmap-verify"
 path = "src/main.rs"
 
 [dependencies]
-rgbmap = { path = "../rgbmap", version = "0.1.0" }
+rgbmap = { path = "../rgbmap", version = "0.1.1" }
 # NOTE: preserve_order keeps object keys in the order they were written.
 serde_json = { version = "1", features = ["preserve_order"] }
 ureq = { version = "2", features = ["json"] }

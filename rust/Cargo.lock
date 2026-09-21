@@ -472,7 +472,7 @@ dependencies = [
 
 [[package]]
 name = "rgbmap"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bip322",
  "serde_json",
@@ -481,7 +481,7 @@ dependencies = [
 
 [[package]]
 name = "rgbmap-verify"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "rgbmap",
  "serde_json",
