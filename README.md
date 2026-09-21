@@ -1,17 +1,28 @@
 # RGBMap
 
+[![npm](https://img.shields.io/npm/v/@rgbmap/sdk?label=%40rgbmap%2Fsdk)](https://www.npmjs.com/package/@rgbmap/sdk)
+[![crates.io](https://img.shields.io/crates/v/rgbmap?label=rgbmap)](https://crates.io/crates/rgbmap)
+[![crates.io](https://img.shields.io/crates/v/rgbmap-verify?label=rgbmap-verify)](https://crates.io/crates/rgbmap-verify)
+[![licence](https://img.shields.io/badge/licence-MIT-blue)](LICENSE)
+
 Everything needed to check an RGBMap index rather than believe it: the protocol primitives, a
 client that recomputes what it reads, an offline verifier, and the vectors both implementations
 are held to.
+
+```sh
+npm install @rgbmap/sdk          # JavaScript
+cargo add rgbmap                 # Rust
+cargo install rgbmap-verify      # the offline checker, as a command
+```
 
 The rules are published at <https://rgbmap.org/docs>. This repository implements them, and is
 not the only implementation anyone may write.
 
 | | |
 |---|---|
-| `js/` | `@rgbmap/sdk` — the protocol modules and a client, plain ES modules |
-| `rust/rgbmap` | The same rules in Rust |
-| `rust/rgbmap-verify` | A command-line verifier reading published objects and one bitcoin interface |
+| `js/` | [`@rgbmap/sdk`](https://www.npmjs.com/package/@rgbmap/sdk) — the protocol modules and a client, plain ES modules |
+| `rust/rgbmap` | [The same rules in Rust](https://crates.io/crates/rgbmap) |
+| `rust/rgbmap-verify` | [A command-line verifier](https://crates.io/crates/rgbmap-verify) reading published objects and one bitcoin interface |
 | `vectors/` | What both implementations are checked against |
 
 ## There is no verdict function

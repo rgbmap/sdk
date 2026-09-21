@@ -20,8 +20,12 @@ rgbmap = "0.1"
 For a command-line checker built on this crate, see
 [`rgbmap-verify`](https://crates.io/crates/rgbmap-verify).
 
-🚨 This crate shares no code with the JavaScript implementation, and must not start. A hash
-chain proves history was not altered only when the side recomputing it is not the side that
-wrote it. Both are held to the same vectors in
-[`vectors/`](https://github.com/rgbmap/sdk/tree/main/vectors); where they disagree, neither is
-right until the difference is understood.
+## An independent implementation
+
+This crate is written against the specification, not ported from the code that publishes
+RGBMap archives. That is what makes it worth running: recomputing a hash chain with the same
+code that wrote it proves nothing about the chain.
+
+It is held to the same
+[vectors](https://github.com/rgbmap/sdk/tree/main/vectors) as every other implementation, so a
+disagreement is a real one and not a difference in style.
