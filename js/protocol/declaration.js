@@ -12,7 +12,7 @@ import { verify as verifyBip322 } from './bip322.js';
 // `version` is what a new declaration is written as; `accepts` is every version that still
 // verifies. 🚨 An old version is never dropped: a UDA's genesis is immutable, so an asset
 // registered under v1 can never be migrated to v2.
-// https://rgbmap.org/docs/nfts-and-collections
+// https://rgbmap.org/docs/udas-and-collections
 export const STANDARDS = {
     'rgbmap-asset': { version: '2', accepts: ['1', '2'] },
     'rgbmap-collection': { version: '1' },
