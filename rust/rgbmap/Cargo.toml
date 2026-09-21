@@ -1,6 +1,6 @@
 [package]
 name = "rgbmap"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT"
 description = "Recompute what an RGBMap index says: the hash chain, the commitments and declaration signatures"

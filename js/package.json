@@ -1,6 +1,6 @@
 {
   "name": "@rgbmap/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read an RGBMap index, and recompute what it says",
   "type": "module",
   "license": "MIT",
@@ -31,5 +31,11 @@
   "devDependencies": {
     "bip322-js": "^4.0.0",
     "bs58check": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgbmap/sdk.git",
+    "directory": "js"
+  },
+  "homepage": "https://rgbmap.org/docs/sdk-javascript"
 }

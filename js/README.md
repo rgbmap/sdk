@@ -1,6 +1,13 @@
 # @rgbmap/sdk
 
+[![npm](https://img.shields.io/npm/v/@rgbmap/sdk?label=%40rgbmap%2Fsdk)](https://www.npmjs.com/package/@rgbmap/sdk)
+[![licence](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/rgbmap/sdk/blob/main/LICENSE)
+
 Read an RGBMap index, and recompute what it says rather than believe it.
+
+```sh
+npm install @rgbmap/sdk
+```
 
 The rules are published at <https://rgbmap.org/docs>. This package implements them, and is not
 the only implementation anyone may write.
