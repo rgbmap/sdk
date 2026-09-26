@@ -71,3 +71,24 @@ test('records recompute from the genesis record', async () => {
     const entries = fixture.entries;
     assert.deepEqual(await verifyEntries(entries, GENESIS_HASH, 1), []);
 });
+
+test('the client asks for collections and transfers with their own parameters', async () => {
+    const asked = [];
+    const stub = async (url) => {
+        asked.push(String(url));
+        return new Response(JSON.stringify({ collections: [], transfers: [], nextCursor: null }),
+            { headers: { 'content-type': 'application/json' } });
+    };
+    const c = client({ fetch: stub, network: 'signet', api: 'https://index.example' });
+    await c.collections();
+    await c.collection('a'.repeat(64));
+    await c.transfers({ q: 'tb1q…', cursor: '153', limit: 50 });
+    assert.ok(asked[0].startsWith('https://index.example/v1/collections?network=signet'));
+    assert.ok(asked[1].startsWith(`https://index.example/v1/collections/${'a'.repeat(64)}`));
+    const transfers = new URL(asked[2]);
+    assert.equal(transfers.pathname, '/v1/transfers');
+    assert.equal(transfers.searchParams.get('network'), 'signet');
+    assert.equal(transfers.searchParams.get('q'), 'tb1q…');
+    assert.equal(transfers.searchParams.get('cursor'), '153');
+    assert.equal(transfers.searchParams.get('limit'), '50');
+});

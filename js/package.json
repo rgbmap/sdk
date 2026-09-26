@@ -1,6 +1,6 @@
 {
   "name": "@rgbmap/sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read an RGBMap index, and recompute what it says",
   "type": "module",
   "license": "MIT",

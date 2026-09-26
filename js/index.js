@@ -54,6 +54,14 @@ export function client({ api = 'https://api.rgbmap.org', network = 'mainnet', fe
         objects: (publisher) => get('/v1/objects', { publisher }),
         manifests: (publisher) => get('/v1/manifests', { publisher }),
         search: (q) => get('/v1/search', { q }),
+        collections: () => get('/v1/collections'),
+        collection: (id) => get(`/v1/collections/${encodeURIComponent(id)}`),
+        /**
+         * Every transfer output the index holds, newest-seen first. `q` matches only what
+         * names a transfer on the chain: the witness txid, or a bitcoin address on either
+         * side of it.
+         */
+        transfers: ({ q, cursor, limit } = {}) => get('/v1/transfers', { q, cursor, limit }),
 
         /**
          * Records as the index returned them, recomputed here from the bytes it sent.

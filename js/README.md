@@ -51,7 +51,7 @@ a time tells it what its user holds.
 
 | Export | What it does |
 |---|---|
-| `client({ api, network, fetch })` | Reads an index: `resolve`, `assets`, `ledger`, `anchors`, `objects`, `manifests`, `search`, `health` |
+| `client({ api, network, fetch })` | Reads an index: `resolve`, `assets`, `collections`, `collection`, `transfers`, `ledger`, `anchors`, `objects`, `manifests`, `search`, `health` |
 | `client().ledgerChecked()` | A page of records, plus the problems found recomputing it |
 | `verifyEntries(entries, prevHash, firstSeq)` | Recompute a run of records: chain, order, balance |
 | `anchorCommitment(snapshot)` | Recompute the commitment a snapshot claims |
