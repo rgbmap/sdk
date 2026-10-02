@@ -1,0 +1,316 @@
+{
+ "entries": [
+  {
+   "seq": "1",
+   "ts": "1700000060000",
+   "network": "signet",
+   "publicCommitment": "0d7a90a53dd695436a11de5af3befeda9faad4f4bc44d9cbc752afd79184c649",
+   "privateCommitment": "6a27b775b1e3b8c868e1ff7d6cbaf20c0fbc06126ea5a96948038b552b59a0db",
+   "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+   "hash": "c3aad8610d8719e7fde28e0556182a0bb4873196295dc53d99279656dcbc2e8c"
+  },
+  {
+   "seq": "2",
+   "ts": "1700000120000",
+   "network": "signet",
+   "publicCommitment": "d5510a5d64ec967f73a187911804532f47898ae16debb3c74b2802f09156cfb6",
+   "privateCommitment": "d39d119d9afc7ee40f1aaf9bd8383833cfad4e424befcd4ca39b1e68cf351dd5",
+   "prevHash": "c3aad8610d8719e7fde28e0556182a0bb4873196295dc53d99279656dcbc2e8c",
+   "hash": "3b716be8a6d52f6e47262b7c5870057382e3da2e0478690a1c9dab60c67f2f72",
+   "op": "issue",
+   "public": "{\"assetId\":\"rgb:synth-vector-alpha\",\"contractFileUri\":null,\"issuedSupply\":\"100000000000\",\"name\":\"Synth Alpha\",\"network\":\"signet\",\"precision\":8,\"ticker\":\"SYN-A\",\"totalSupply\":\"100000000000\"}",
+   "publicSalt": "536bd3535d6ff6705464a6061c5832d6010cd8f8aab26c34ae2d9580b1dc161d"
+  },
+  {
+   "seq": "3",
+   "ts": "1700000180000",
+   "network": "signet",
+   "publicCommitment": "f9697a6e9a228333f1f6f4e62f28056743553c8f4ccb1cbdaa7e0911a6439cc1",
+   "privateCommitment": "5ebd9f656e30a84bc6fdaa89045bae17260209b0f949ce678a419c4675d66a9e",
+   "prevHash": "3b716be8a6d52f6e47262b7c5870057382e3da2e0478690a1c9dab60c67f2f72",
+   "hash": "111e276a21306a3346f624a9f6560b18363039bebfaf8a00796d5c818d19678d"
+  },
+  {
+   "seq": "4",
+   "ts": "1700000240000",
+   "network": "signet",
+   "publicCommitment": "fe81ca0ad780d3de883898a02068cb3ef0794d02a812bc7afa41288d41741abd",
+   "privateCommitment": "a88aaed0b44e9c625b77226a83f44d75d35cc8218291befeddabfe66fa616287",
+   "prevHash": "111e276a21306a3346f624a9f6560b18363039bebfaf8a00796d5c818d19678d",
+   "hash": "504455b2647f305c10f43e57d5af63de384ddd9baece9e8913a4840ff25eeb6d"
+  },
+  {
+   "seq": "5",
+   "ts": "1700000300000",
+   "network": "signet",
+   "publicCommitment": "854a5a5c578fad08a1d0664e9b0b84a90a0eab3d844ca735d76e44298f740f11",
+   "privateCommitment": "b13b4e9a23a7a19cf3b9bd40079be61f1c258f692325e3eea4dc78d446ca45fc",
+   "prevHash": "504455b2647f305c10f43e57d5af63de384ddd9baece9e8913a4840ff25eeb6d",
+   "hash": "a86015a2e9e84702cc124947dbae16752abbb2b92c01dad8f97bfebe5c326fd7"
+  },
+  {
+   "seq": "6",
+   "ts": "1700000360000",
+   "network": "signet",
+   "publicCommitment": "1bef8e5eaee5ee365dc5a8140973787e7940db41fa065756eb2b6884809e4e71",
+   "privateCommitment": "899f6ac104b7acf9d43913c6c3d323eaa9d9d59aafffd64f27054008b102fda1",
+   "prevHash": "a86015a2e9e84702cc124947dbae16752abbb2b92c01dad8f97bfebe5c326fd7",
+   "hash": "8d152d30bbd5a23ce08729fa061044ec1c4b2983951d3aa1085c72891399c723"
+  },
+  {
+   "seq": "7",
+   "ts": "1700000420000",
+   "network": "signet",
+   "publicCommitment": "b6c3ac7fb25248646e8e5b7f9fc16bfa37fe4c805cb1105466feeca0c2e3e0f3",
+   "privateCommitment": "cbee855d7a5e8431147c89d7fe5e8df3b545224031f8443546c59b984be48704",
+   "prevHash": "8d152d30bbd5a23ce08729fa061044ec1c4b2983951d3aa1085c72891399c723",
+   "hash": "d917499c6041014f81f28909ad7ab454835516c628e5101b97b62fda42d7dc21"
+  },
+  {
+   "seq": "8",
+   "ts": "1700000480000",
+   "network": "signet",
+   "publicCommitment": "f7c71ce48888434d7aaf483dd6b992edae51053600a7c19fac866376ede654f1",
+   "privateCommitment": "f533a772ecf5f7c929fc92d3794005836237749c5446a9da0dc4f7d135adbaf1",
+   "prevHash": "d917499c6041014f81f28909ad7ab454835516c628e5101b97b62fda42d7dc21",
+   "hash": "af3d4bbfcc0be806eb5aa11763b25b7018ae3abbecd63515227e5548416ea578",
+   "op": "list_asset",
+   "public": "{\"assetId\":\"rgb:synth-vector-alpha\",\"listedBy\":\"synth-vector-issuer\",\"minSats\":\"100000\"}",
+   "publicSalt": "328a196301966b960c6314fd2adb6a9330e0b4a9210c14edc8b1493327549731"
+  },
+  {
+   "seq": "9",
+   "ts": "1700000540000",
+   "network": "signet",
+   "publicCommitment": "f72efc72d5b176b8ced5821f3c3d3c1cd187988b0eb17817986fa47455e3180d",
+   "privateCommitment": "a7cbafded94ae880877a12e400dc673ea375fda1f7288864e4092ac7a0b50544",
+   "prevHash": "af3d4bbfcc0be806eb5aa11763b25b7018ae3abbecd63515227e5548416ea578",
+   "hash": "7d38502b5fe8327bba9fe0605cd68c3a7ea59c6ff9ea77f3bb705a104f93b8ef"
+  },
+  {
+   "seq": "10",
+   "ts": "1700000600000",
+   "network": "signet",
+   "publicCommitment": "6f849323c9a14997b29c3af9cb5c529ac4ffe7eb4dfd6435ff1739b16732e525",
+   "privateCommitment": "bb283f165964b7ce19d2d24b030b8acbb47b6d2b9fe93fd1758d7ca21dfbfa4a",
+   "prevHash": "7d38502b5fe8327bba9fe0605cd68c3a7ea59c6ff9ea77f3bb705a104f93b8ef",
+   "hash": "2af6929e20fa15565a6f097681957cbdc4af0b2fad66a2f2963011c54c47af95"
+  },
+  {
+   "seq": "11",
+   "ts": "1700000660000",
+   "network": "signet",
+   "publicCommitment": "7933606e42316c2db608e656ba45cbe228d6eee9bc285cf44453aa000fcaf5fc",
+   "privateCommitment": "d74b5b9e02ef2dcbfd03c7594b35da23f140d48cab9fa374ff9d82f901d5bc48",
+   "prevHash": "2af6929e20fa15565a6f097681957cbdc4af0b2fad66a2f2963011c54c47af95",
+   "hash": "c65ba849bab885fa5a7d2deee06fb9eaab2a9e8fd9049dea8f4591ca2a547482"
+  },
+  {
+   "seq": "12",
+   "ts": "1700000720000",
+   "network": "signet",
+   "publicCommitment": "0e340ecc2dfa7bb3c2ccedb376e8a86da68974e123721128c85e8cdbc93cfa60",
+   "privateCommitment": "3010cbd3bb79547f58aab376e1dc3b731f3363b3793fb4e6694aecec5acde2d2",
+   "prevHash": "c65ba849bab885fa5a7d2deee06fb9eaab2a9e8fd9049dea8f4591ca2a547482",
+   "hash": "608eb755d5452ab393931d1875f222b6621c923ebdd19cb95d184b9aee40fc76"
+  },
+  {
+   "seq": "13",
+   "ts": "1700000780000",
+   "network": "signet",
+   "publicCommitment": "f1cea8a28eb60dcd8000b32960fd632e1ede64c316b1d77183642e4fbc34089e",
+   "privateCommitment": "52ec1ac1ff11083b93e69c2b8cb5f8aca4e7f38e86bfe64e6586f87fa18506de",
+   "prevHash": "608eb755d5452ab393931d1875f222b6621c923ebdd19cb95d184b9aee40fc76",
+   "hash": "ae58c52aec7602f9eb85a5afddc8e07b9dc214c0c74d7c62b841c2cbc567050e"
+  },
+  {
+   "seq": "14",
+   "ts": "1700000840000",
+   "network": "signet",
+   "publicCommitment": "1ad1686e161bb369d72d2e50d9207f5953f5dc3e79c732fce74445a3235333eb",
+   "privateCommitment": "87c749291e899336c5cc2bc8f2b7c09876e447e72d76be2d3e5ff26845010f2a",
+   "prevHash": "ae58c52aec7602f9eb85a5afddc8e07b9dc214c0c74d7c62b841c2cbc567050e",
+   "hash": "e7986701b38c9dbc0623ec4d912cb4f544128221e5bf040671921c6a693600af"
+  },
+  {
+   "seq": "15",
+   "ts": "1700000900000",
+   "network": "signet",
+   "publicCommitment": "225df111e84d0d1e7f6ae503a89d40dcd505bdee9e9821d7a041af17161254ee",
+   "privateCommitment": "8b2d83d40e4e1a82fe8693a9141984917180e89ffc0792d6467cd3efea4d85ca",
+   "prevHash": "e7986701b38c9dbc0623ec4d912cb4f544128221e5bf040671921c6a693600af",
+   "hash": "3113e42ec55db0a03d834f6900d6cafccab894c3606694c69ad7515959c7ddcc",
+   "op": "transfer",
+   "public": "{\"legs\":[{\"assetId\":\"rgb:synth-vector-alpha\",\"delta\":\"2500000\"},{\"assetId\":\"rgb:synth-vector-alpha\",\"delta\":\"-2500000\"},{\"assetId\":\"sats\",\"delta\":\"546\"},{\"assetId\":\"sats\",\"delta\":\"-546\"}]}",
+   "publicSalt": "b5c2508e260f839cfa2dc6c9ea841cac037c96463e0f2039bc18088dad49d247"
+  },
+  {
+   "seq": "16",
+   "ts": "1700000960000",
+   "network": "signet",
+   "publicCommitment": "09728d43943cb2c299c407802198197ef2f09dbba44d1dcc2a4742641cf8f3dd",
+   "privateCommitment": "981a074a669ff552aebda66f3e4eb25316767124dabaed73635655cedf0b35c1",
+   "prevHash": "3113e42ec55db0a03d834f6900d6cafccab894c3606694c69ad7515959c7ddcc",
+   "hash": "9c45a826a6fa999086bde1babf179a3ad16248cad115ea264dae8ddff36cc79a"
+  },
+  {
+   "seq": "17",
+   "ts": "1700001020000",
+   "network": "signet",
+   "publicCommitment": "457b4df69b7ff4ddd5f52f7a3313126cb60a9f4a522943493b841a6e3b9c00c9",
+   "privateCommitment": "8815c093a430b80dd9e278c4bcfce3c9db875defbe464eb28e4efc8b9616c7ce",
+   "prevHash": "9c45a826a6fa999086bde1babf179a3ad16248cad115ea264dae8ddff36cc79a",
+   "hash": "b6a6155c6da25ddd59143b82513bb5023390038b3509fc4c1d27c13c626e294f"
+  },
+  {
+   "seq": "18",
+   "ts": "1700001080000",
+   "network": "signet",
+   "publicCommitment": "f97d7b7c39a92e464734cd05df370bb166709c9a0e919b1d76086ae9845f2245",
+   "privateCommitment": "99f8205bb799f7da9e461c8975bec179cb0bc56fa4a0f72c2df003c6e47f1f4f",
+   "prevHash": "b6a6155c6da25ddd59143b82513bb5023390038b3509fc4c1d27c13c626e294f",
+   "hash": "9d509f6173ac50f943d496354bc8343e2a60224951e364bea39f9e72d822e8a7"
+  },
+  {
+   "seq": "19",
+   "ts": "1700001140000",
+   "network": "signet",
+   "publicCommitment": "1ddc4520b2577927361783c88f1b9c3832f1f0f42c9c98d0018d60a610929f0d",
+   "privateCommitment": "fe0b05b0a68c2b5c0f88869c48696b7db69b5a8de92121ee9c7c0a09d0cd6a82",
+   "prevHash": "9d509f6173ac50f943d496354bc8343e2a60224951e364bea39f9e72d822e8a7",
+   "hash": "a9f1d75fc5eea797076f4ce5ae5d78c26e12821efc02aeb6e8301a086655c96e"
+  },
+  {
+   "seq": "20",
+   "ts": "1700001200000",
+   "network": "signet",
+   "publicCommitment": "2a12e029749ba1bdddb77ae84bdd7587ce004e714b3a3c555976e374c743c7b0",
+   "privateCommitment": "e7e33411011fd95895464f2b5a2902d993f2823a14c5b10ffcf297ffb595cefc",
+   "prevHash": "a9f1d75fc5eea797076f4ce5ae5d78c26e12821efc02aeb6e8301a086655c96e",
+   "hash": "5d05123751d38e07656590331d6e6d0d04b0144935c6c5b0f25ace00735838a3"
+  },
+  {
+   "seq": "21",
+   "ts": "1700001260000",
+   "network": "signet",
+   "publicCommitment": "7790ad8a8402d25bc3b2a5eb6a5c4b4334f28f030c65b6002fc888531a2686ac",
+   "privateCommitment": "730fcc839e629af893fecd5cb28f299126720d62975502a7d79c3af2430fd4d3",
+   "prevHash": "5d05123751d38e07656590331d6e6d0d04b0144935c6c5b0f25ace00735838a3",
+   "hash": "bd7224a8ad608dfb2d6709f949227e0c794827b8f33530189133094ebf755c1d"
+  },
+  {
+   "seq": "22",
+   "ts": "1700001320000",
+   "network": "signet",
+   "publicCommitment": "9258d3bca10156fd8a2e94ab14a068dd7d8bf876aa0d107ae51dda6542fad1ca",
+   "privateCommitment": "7ab30701c2d0947ef27337cfba95adaab8d977e20dc92977ebf7ff4b806e0fa0",
+   "prevHash": "bd7224a8ad608dfb2d6709f949227e0c794827b8f33530189133094ebf755c1d",
+   "hash": "41f436bcfbd5f4d02c53b4c48c10a7a02fb97d7e651315a807c1ad39af763529",
+   "op": "param_change",
+   "public": "{\"after\":\"20000\",\"before\":\"10000\",\"network\":\"signet\",\"param\":\"withdrawal_fee_sats\"}",
+   "publicSalt": "fb41432680a6d3964db19cd0e7bd1fb33dd8b3fd8e1b3af907aeed9e9fb3889c"
+  },
+  {
+   "seq": "23",
+   "ts": "1700001380000",
+   "network": "signet",
+   "publicCommitment": "7484f28611b9943fc2ec00bc2130161e7f7059b1791c8b5bc927eb2bcd509828",
+   "privateCommitment": "28e010e57a029ade581e41a41c25c4cbf7da72e6ac94d0c6eae489fc6f8a6900",
+   "prevHash": "41f436bcfbd5f4d02c53b4c48c10a7a02fb97d7e651315a807c1ad39af763529",
+   "hash": "07d35af51ba0933bbbc42653857a976e3ecb2eefa8cf95e568d824710bcbbdba"
+  },
+  {
+   "seq": "24",
+   "ts": "1700001440000",
+   "network": "signet",
+   "publicCommitment": "870e8caa2814eb1063c68df544e1d8826b426934ff6cd20528a098e2793c4c19",
+   "privateCommitment": "7e13521002b1846a9052f214c101db300828eed3905a48ae60064fb898661e29",
+   "prevHash": "07d35af51ba0933bbbc42653857a976e3ecb2eefa8cf95e568d824710bcbbdba",
+   "hash": "5cc79631da97efffd37d7dd4b7ba626d4fb45b36bae71f805dc87c71943d9fe9"
+  },
+  {
+   "seq": "25",
+   "ts": "1700001500000",
+   "network": "signet",
+   "publicCommitment": "7fa9ae2453f52c4322370f4bbcea7a917658bb3cc5fb3f6ec2b8651e81418758",
+   "privateCommitment": "2ff6307a669c612afb1984491afc4f903f54051b53e4ce0b4781931487cc8b11",
+   "prevHash": "5cc79631da97efffd37d7dd4b7ba626d4fb45b36bae71f805dc87c71943d9fe9",
+   "hash": "7302a5cfcca3f77fb4b424c92b8059a0ba45f610a9e7d5efc1ac7dc3781e3543"
+  },
+  {
+   "seq": "26",
+   "ts": "1700001560000",
+   "network": "signet",
+   "publicCommitment": "25d108167b9c2fe18c47414ad5d1ad71a364dc765648bb86c69d8a5446690cbe",
+   "privateCommitment": "d35e5c8a40cc2ee4178a30d5b4c823158929fe02f332ab9b84bff9b2e896b9b3",
+   "prevHash": "7302a5cfcca3f77fb4b424c92b8059a0ba45f610a9e7d5efc1ac7dc3781e3543",
+   "hash": "9ccc79a43b87fbe85676f9c82d41c9f3e8af6a16f077b2d874deec0ef5edee0a"
+  },
+  {
+   "seq": "27",
+   "ts": "1700001620000",
+   "network": "signet",
+   "publicCommitment": "5606c00cac7fe15c3d6e3b909ea3cee22b15d27f00d891f2cf806ceb13319c3c",
+   "privateCommitment": "5868deb7bf7000c3e5f8998ee052d8c428c8e465d90d525a9dc302194746265c",
+   "prevHash": "9ccc79a43b87fbe85676f9c82d41c9f3e8af6a16f077b2d874deec0ef5edee0a",
+   "hash": "74ae1fcb2086b8c2e7eaca8710c3053eae308db326ea7c3b4de6c6da8aae3960"
+  },
+  {
+   "seq": "28",
+   "ts": "1700001680000",
+   "network": "signet",
+   "publicCommitment": "025bbeab581736d1b9e1ecc99e9cb28f3536718ba963e6feccb0cf176a21e0ac",
+   "privateCommitment": "bfbad1a78a5d292dad16e8324d8ee7a4f15828550c0e42c6705399337de2f8ed",
+   "prevHash": "74ae1fcb2086b8c2e7eaca8710c3053eae308db326ea7c3b4de6c6da8aae3960",
+   "hash": "aba9254cbd6d7bb4c54f8d728db2f6a009ccc784a2a2f1fa29ba5e46e5f9fb33",
+   "op": "issue",
+   "public": "{\"assetId\":\"rgb:synth-vector-beta\",\"contractFileUri\":null,\"issuedSupply\":\"21000000000\",\"name\":\"Synth Beta\",\"network\":\"signet\",\"precision\":8,\"ticker\":\"SYN-B\",\"totalSupply\":\"21000000000\"}",
+   "publicSalt": "84a237a08b1e80ac9c6ad19e322b7ea68b91f41dfbb93c7e95887ae8a2e8ac40"
+  },
+  {
+   "seq": "29",
+   "ts": "1700001740000",
+   "network": "signet",
+   "publicCommitment": "e7d601dbc0aa90ccc92d7fbca6b05a0a9d9b5ab4fb70b48d7db21fad74468816",
+   "privateCommitment": "b11a7252793d6372d785ca77789ea081adcd8da648d8bd40bcf2309dab26473a",
+   "prevHash": "aba9254cbd6d7bb4c54f8d728db2f6a009ccc784a2a2f1fa29ba5e46e5f9fb33",
+   "hash": "7a731dd099ae767658fa71ab5d0925b68fd458dd23207b8bea017bac9e07a295"
+  },
+  {
+   "seq": "30",
+   "ts": "1700001800000",
+   "network": "signet",
+   "publicCommitment": "6d0f60ea1ca6af4e2d993fdfd87c88631fa33fa589ad60933dc8b720b48ecc43",
+   "privateCommitment": "85835abd387c95a612370c72b8ff92d0be6ebbd3bd531161e8bde0913f932dc2",
+   "prevHash": "7a731dd099ae767658fa71ab5d0925b68fd458dd23207b8bea017bac9e07a295",
+   "hash": "e16a7f334659cfb2d227b3bea74c2e01f272f67ef6948dc853fd099c5f0f39cd"
+  },
+  {
+   "seq": "31",
+   "ts": "1700001860000",
+   "network": "signet",
+   "publicCommitment": "c6cdb670d9406d01bc4ff4b26e5603a1187a63314dec33817f45985a207b80e1",
+   "privateCommitment": "7d5c66559c7056a2d7580a0cf6c7d4931a0485e7355036dafa3454e119032000",
+   "prevHash": "e16a7f334659cfb2d227b3bea74c2e01f272f67ef6948dc853fd099c5f0f39cd",
+   "hash": "99d0e4d7937b38c24755210fc9a2f9019fae205e04ec19165cb41f193ba5f30d"
+  },
+  {
+   "seq": "32",
+   "ts": "1700001920000",
+   "network": "signet",
+   "publicCommitment": "a18fb89115f4dfe3cb28c4458c17514934fcbbb33d10cd1ab6755aafe0494ac1",
+   "privateCommitment": "f1a5bc9818d4fa9b5c426b5ebba06f7f57a8c3cf48725b1c45d0353dbf09ec02",
+   "prevHash": "99d0e4d7937b38c24755210fc9a2f9019fae205e04ec19165cb41f193ba5f30d",
+   "hash": "5b248aa27bd037303232b9928c2fd28964740f4f5d46d2a9a47266647a801464"
+  }
+ ],
+ "limit": 500,
+ "nextCursor": null,
+ "verify": {
+  "algorithm": "sha256",
+  "preimage": "prev_hash || 0x1F || seq || 0x1F || ts || 0x1F || publicCommitment || 0x1F || privateCommitment",
+  "encoding": "UTF-8, fields joined by a single 0x1F byte; output is lowercase hex",
+  "publicCommitment": "SHA256(\"rgb-ledger-pub-v1\" || 0x1F || public || 0x1F || publicSalt); `public` and `publicSalt` are returned for ops published in full, and by /v1/me/ledger for your own records.",
+  "note": "Every record is recomputable from the fields above alone, so the chain can be mirrored and checked against an anchor without anyone's transaction data. Hash `public` verbatim where it is present: parsing and re-serializing may change the byte sequence and will produce a different digest."
+ }
+}

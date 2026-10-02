@@ -1,0 +1,997 @@
+{
+ "generator": "bip322-js",
+ "cases": [
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "",
+   "signature": "AkcwRAIgW7kgE0aYR28psEmJQq9sKSGX/CfB4uiC+AOsQE3mJ+0CIFFmgJ3mI0DljG5cpegsOCUOp1upzr4uyjgzB+e7mShwASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "Hello World",
+   "signature": "AkgwRQIhAKWWgOo5YaEg+zxhpBJpiUVI+A54OJuH9e8NzsW0HqptAiBPR/PK5/L4vM+0Sk+1smHdrFVtvSJT7rzcX9ND8JrejQEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgBR4c9h7Z1vmSgiX67TJfHAkCOGsfryFOTCRrty5Tr3ECICTdXCKc/UU7jCtkM2eVj5kUG9fQfl4Mng0NegX0yRExASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAIjzEaiKljhgNWqJqJQE4tUeRwHx/pXW4LZACnLet0aWAiAjaWiB1KGT0EoAErae4sMkEoSZvUIWSy0xbMFqr5VugAEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgE/hUqgVOuDal8gLdZimr9Ls+8nNrqUTX09jceib9HDUCIGkc6sQ5kKOrphdXKQD4Y3eMJvBlG376e0jf4ogrnUhGASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgexqOqulMLx2b5tPLTZHMAV/hYnCjgGuOV9qC9VEqZGkCICepU0PcNh5fpnS8QRMqUDaH4Q/3DtfhOXvr1lTXt1MvASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkcwRAIgF8wdvpm8hCo+hs3W/15xJh75LTfbgR6LMWeCJPhcD48CIGZVIwtQHRmifVeqj3+vzFOruR03miTAdWSd4EYWLnFxASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkgwRQIhAKAY8CXYNvJfU5ykhFpXFrKp2Mh0hn2iHvWKky/3T86uAiB3mexhwLaruTo0QxDat5D703eZNmGa9leuXCMdEosxRgEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "",
+   "signature": "AUHz09mw71SsxKtQIBGuMNJnMkQjqPrtgSwMpl0FjmJ9dsRM7vL9t6oOsYJ2dNojVg04+gu4k+zixZfStGLq1CKgAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "Hello World",
+   "signature": "AUFqpK1EHFdTmDQ2raPBuGV1MIWEeV0/lSGp5ZkVGK1U74Xf6kt1v+UX1DHaJ4SmFLLYBq4i9etgqo9f/azEuOzYAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFy3SirfG1LvLr0sqLzYsU2oKtcCrIV83DxxH8rdWKJe3ci2WAxk18vEF64I+mcWW71oiUiBZgh+Wzo68kh4LIEAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHy9M26mWFZj+3hPdg3dr3NMMyiF4iegYC/PqTj2fiUHhTa5vgihK07tu8tKzfmxzVB5Dq4jwBEkQ5ICRkxSA7rAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFRuvxKX60Z6Yv4adyoZVHTA1kYUNMXCwYtdM/n+KmKQ28oq3giUuX+UxreBFMG3OQu3+NfN/isHXnXPeMtPoWDAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHUDgjrzJlMbq4Uxl9yDpfujyfAixgfmSvSrEEjlBtroeFhwfRFLdhQwxgs+ZiryQ/LTiV98f39S0sNoo5piZ9ZAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUH+aaa/6EX1auchXavOwvBVTfO843ZkMkWtc0hdYGnKp3iRten0dhB/ny5Ip7VJwXzQGbokeR4OVw1cZ0C2tyxWAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "bc1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5sspknck9",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUHnl9f74oXgAAo9re0y48eQDb2jlm30tWaCd0MwXZs8TjNPIy6crqjCJfTDyLRMnKU0NOqEN+wbHaePTciYA7LhAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "",
+   "signature": "AkcwRAIgW7kgE0aYR28psEmJQq9sKSGX/CfB4uiC+AOsQE3mJ+0CIFFmgJ3mI0DljG5cpegsOCUOp1upzr4uyjgzB+e7mShwASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "Hello World",
+   "signature": "AkgwRQIhAKWWgOo5YaEg+zxhpBJpiUVI+A54OJuH9e8NzsW0HqptAiBPR/PK5/L4vM+0Sk+1smHdrFVtvSJT7rzcX9ND8JrejQEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgBR4c9h7Z1vmSgiX67TJfHAkCOGsfryFOTCRrty5Tr3ECICTdXCKc/UU7jCtkM2eVj5kUG9fQfl4Mng0NegX0yRExASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAIjzEaiKljhgNWqJqJQE4tUeRwHx/pXW4LZACnLet0aWAiAjaWiB1KGT0EoAErae4sMkEoSZvUIWSy0xbMFqr5VugAEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgE/hUqgVOuDal8gLdZimr9Ls+8nNrqUTX09jceib9HDUCIGkc6sQ5kKOrphdXKQD4Y3eMJvBlG376e0jf4ogrnUhGASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgexqOqulMLx2b5tPLTZHMAV/hYnCjgGuOV9qC9VEqZGkCICepU0PcNh5fpnS8QRMqUDaH4Q/3DtfhOXvr1lTXt1MvASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkcwRAIgF8wdvpm8hCo+hs3W/15xJh75LTfbgR6LMWeCJPhcD48CIGZVIwtQHRmifVeqj3+vzFOruR03miTAdWSd4EYWLnFxASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g=",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkgwRQIhAKAY8CXYNvJfU5ykhFpXFrKp2Mh0hn2iHvWKky/3T86uAiB3mexhwLaruTo0QxDat5D703eZNmGa9leuXCMdEosxRgEhAnm+Zn753LusVaBilc6HCwcCm/zbLc4o2VnygVsW+BeY",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "",
+   "signature": "AUF1pDoO+1ap1Bq14aAYJrF87PqyE+Bavevcd/7x1NOntqS1RlfMIh9/gyBSFtioJGeHIURd9iGZanl+JdFyTg1LAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "Hello World",
+   "signature": "AUFdsyVmGao9IQIiPsx0bOj5QYMvh14pnEfT0dNSnunzJHxbwMMvC+GgnKjMqSa9mOLwbOwjfiwTUbin/b/L8OQ6AQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFqIrFnAl3A1EER2quHMhiVTFw/topA9VHU0l8VYVa8FRWQji746s0OyJtJF2mGEnLdQndS5ywuwGM/1BIZB8BgAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHCvwyytGDum5TPebIvqUTNSpdON+qlZAXJhtSKTYhfoh0DdzNaMGdKMV5Ra9g2zGY7eRnB3wM286lGp6Pd7N1QAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFJFWy9zCFkUddfMA4UVY/NTtgX4Ot3bjIfcL3X6F1JetAiRxq8upDmFWS63t4K8biT4/P3oRFJPaA42LShTmyuAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHCIws/VOwRfpOmJRRP2FINHlwizekph2CjbVgzhOT1fAddXENq84K4QvOFwovLStOluJ7L1f0zMb835V+o17GhAQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUHerx24/JicMFR7oQ8wDBXexezp7gEysHB6Rfi+O574PSRTfktOeJT0qD9jYHosZZnXQNt8UWSRHk/vIKx5c5z3AQ==",
+   "verifies": true
+  },
+  {
+   "key": 0,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "tb1pmfr3p9j00pfxjh0zmgp99y8zftmd3s5pmedqhyptwy6lm87hf5ssk79hv2",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUE1nZ0mqzLqTlDe5XqZ2RtG+5fGrPefOqWOynvq0K4Cel74x3en7GLon1tB/XJxKibxC3Rtt+AXegnawv3QOJPKAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "",
+   "signature": "AkgwRQIhANraL8Mmlqe/BrlzyXd16KaigHKAiO9PriPPjf2BUVCtAiBZKIt0jAxRUgCGKuMbhJATFg4Vb59Qi4A4CSsG3U+vYwEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "Hello World",
+   "signature": "AkgwRQIhAMfFcIoAvV5HZ3P+SMDFiBi9xHFCufWtnap3PBjX+yzHAiAcY715LmTQp7UbF5yhl1vTvppjzY99fjitmNEY29YOewEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAO6UrFIagsCoBemRcLS3B1u87JejKucLUq/ayhoWVwmdAiBB2g4tagKiAxz2R068AQucmYinpiG43sPF7ghqOzwF5QEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgCsGXbwGAMclbrHMSvz4LSGI8y9N6TdOcur7jJDVbf4ACIDpGggTu7nru3Nbsi+GUrNFRmIUuynsLy35iYynKIb0jASEDTzVb3LfMCvco7zzOuWFdkGhLtbLKX4WasPC3BAdYcao=",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhANFzXl1/jtC6eRC/kfObFRrVDvUbT6iuYOAQ4PEQ5Js7AiB5U7OAUe6UX/XvChhh+FBlyYSeGUrUlvEM9C2Qhwu33QEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAPaUkpdJj9ozwIyvtackYUd1YkQbUdKslOr6bKlE96itAiBShykmUYIQ7hqNljTm1c5NcVAA0U9FcZzbNHPBuYelnAEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkgwRQIhAKU/W3jmjfoOcBp+5RxQCq4gnCc2eSf8FzWfiLBaR0HPAiAoFYBmcxIqgRg7PmiXYMx6Im7Wa9iSoNmoiIe/3+fucQEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkgwRQIhAJbL4cOBJyHAH7p8bGdTqdjhLOeAuUcu3uWYODlFbybLAiAB1fnPZZLnNvdSnngOomNCzUmMYVEfCcNrCxVnfJvjcgEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "",
+   "signature": "AUFufDx4Mf4cZfHgNdHDSwxcODsiayVRxxuxdEAsv5zKZhMcOlgJKN3onhRqGzOQoavw/lYfur4j5F26pJH5o5PrAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "Hello World",
+   "signature": "AUHls+gV7cgeG6UdL+/A/Udov93dC83owzecAsX7yg1PrZQqtmNEm7IkOCLBVvOqtwTrHeWF2CPmGJsUdyNZSnIsAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUG+iPBOVI0aHVP5u1a4LVuP6A7o+6L3KOYFFdF2LcveyrMVLEKCdBZ2d+zfu96fcevtR1xDpu8Z0FPr8hSRljosAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHhbFf7RNtEZkynK7s+YN/EqC9oXflBB2V3rgLAsGf4kevAUz2nppMTZ+bmjlRBBwU+J8mN2RQwRuWCBhWih9D2AQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUGuuSAJlNxCzV8kyu8fStlb4ttTl5w7NxZAfqes1HrC3aGLXIx8lzzSHYzd8Sorku+XurR0Q/jSxAwC/62mbuQCAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUEvrE5Y3P5d6qehfrkBZIr66PSz1G2DPOjAT0V4jprlTLPx9zBkbofKDyfJG80MhEP9W+ggrH1rC/W/SJ5e0aIGAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUE7+UG/+ljQf/Jc8AH7SUCKQWbwNdEUsQ7jh6XVu4/mQ1EdtyAJ5/036TgxfcVMp0RPn5kNl6/1uSuVLmsbEs6uAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "bc1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmq6cnwza",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUF6YFDoh45QRgEbfouxVsZbYCKe5NEx981FYccy7QuBAgjZg6NQz9h9T3U09UrQ8BmY5MnKNGlcyeN67mO+jinWAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "",
+   "signature": "AkgwRQIhANraL8Mmlqe/BrlzyXd16KaigHKAiO9PriPPjf2BUVCtAiBZKIt0jAxRUgCGKuMbhJATFg4Vb59Qi4A4CSsG3U+vYwEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "Hello World",
+   "signature": "AkgwRQIhAMfFcIoAvV5HZ3P+SMDFiBi9xHFCufWtnap3PBjX+yzHAiAcY715LmTQp7UbF5yhl1vTvppjzY99fjitmNEY29YOewEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAO6UrFIagsCoBemRcLS3B1u87JejKucLUq/ayhoWVwmdAiBB2g4tagKiAxz2R068AQucmYinpiG43sPF7ghqOzwF5QEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgCsGXbwGAMclbrHMSvz4LSGI8y9N6TdOcur7jJDVbf4ACIDpGggTu7nru3Nbsi+GUrNFRmIUuynsLy35iYynKIb0jASEDTzVb3LfMCvco7zzOuWFdkGhLtbLKX4WasPC3BAdYcao=",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhANFzXl1/jtC6eRC/kfObFRrVDvUbT6iuYOAQ4PEQ5Js7AiB5U7OAUe6UX/XvChhh+FBlyYSeGUrUlvEM9C2Qhwu33QEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkgwRQIhAPaUkpdJj9ozwIyvtackYUd1YkQbUdKslOr6bKlE96itAiBShykmUYIQ7hqNljTm1c5NcVAA0U9FcZzbNHPBuYelnAEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkgwRQIhAKU/W3jmjfoOcBp+5RxQCq4gnCc2eSf8FzWfiLBaR0HPAiAoFYBmcxIqgRg7PmiXYMx6Im7Wa9iSoNmoiIe/3+fucQEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "tb1ql3e9pgs3mmwuwrh95fecme0s0qtn28804khrk8",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkgwRQIhAJbL4cOBJyHAH7p8bGdTqdjhLOeAuUcu3uWYODlFbybLAiAB1fnPZZLnNvdSnngOomNCzUmMYVEfCcNrCxVnfJvjcgEhA081W9y3zAr3KO88zrlhXZBoS7Wyyl+FmrDwtwQHWHGq",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "",
+   "signature": "AUGlEYXkuf5U9XobknRBH5OcUteC23TxOeiUYBESuz8bVD29ZzskciyVrQrNjsa1skd7y5EkeLRZyOOOixRp5rd3AQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "Hello World",
+   "signature": "AUGDVepAClEDhnqZtg9WGwZ8r25Rf7Jk6zksWM/Z4D+z1heI9hQXrmS/NEIzkPoTXtvVPM/EtLA5Sxt+WI00AsKoAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUGq0+pDIL+JPDh1qXhglSOF9bpathT8CG5HeuJqLZyIBsjY9u0PLi48ucNjNTPJ0RTnPuUJ/73ZPEFxcYLWd026AQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFbcWTU9pvj4f1yPs2WWZ/65jiMNfkeZID+3dUW0rhHy9Ge3+OTEK322ZzmrnmdkVxAMqNxgXcBddcXGRXUf+UyAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUGMs4lNhMn19twWkuFGKFlcrD7VyQqQk5+dnwt6KmVcNtUey1KVeH+geekvGrIClgb2I2mybSwNv0hEdSfETwsAAQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUH1k72Q/PFSom0iJOyavvsZ1RMQlLgvTgnj23FO5nzx7WwRSlhSDunnaQ7Ng1Be0355/NYtj2p6WDmxhCbNoVR/AQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUHRy9SWlc/xZU1+r5Qc3/T7hY3Klvif/yDzFDSUvc4kWDNUcWUdlCg6HfEap0Yox8RJh1rYkbG6wloqUN/lcis8AQ==",
+   "verifies": true
+  },
+  {
+   "key": 1,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "tb1p9fjtrm3nwhemkjek0wxtswz2glmneu33w9lcylrvd7alttk0psmqds9pcj",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUFaAHrXzWSDK7Aon7iDFgwfc54Oy8SQ5ZS34ERk6weVLp7g5Pp4kKfhvvYAlATf+vK62ZQYqX0mG0z0qUWbuKjuAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "",
+   "signature": "AkcwRAIgVf1yT/r6AlvqC8YCV4anC5sX5cOtJZLxx7yL8DdIFMoCIDlziKITitemwSsALxJ6I73Mbvo9l86nQ5G9ECNywkhGASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "Hello World",
+   "signature": "AkcwRAIgI8k3+HtKZr0ehbaW/7VyAfa8/yolFETSX2LY6hh87h8CICW/YlX2XM3i3v76MugsK1SFV3sTuyctyiR7uJGGUZZOASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgOHbW3CTtlr59dRStGWOo9T4ACmxswU1j83jxuKVXm0ICIEqIFiRc36ztq0xL6WjYeyBi2cr8nJahMynL7mZzieJwASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgZJUhN7jdevr7uRr9qLtZQva5qXTiE4f9NlEEQw/dnRwCIELu7iN3+vS+hnq7bj0lQvczn/l6bj0P+yxvugWIGIPkASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgPelA7asJg3Oaqkn92ggjreLSBqa4Y4xlM/CeCu1Z908CIEea66ZkJk31O/EOCFv/+O60bPsgFDMZZJyvgQG6QDA8ASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgApZPD8cRvE9OzzQRtjd5EFuhmYEVnGIBDhy7Vm+gnX0CIH5EmefwTBcpuunwAxmJHhrqRm0jgN1/vq4VzB5QMX5uASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkcwRAIgRZ+HOIxVj82ly+70nyt2z7Swgq4ZCsIYpj7Rv9accb8CICKdGqlOxl2tXX0k3HXF1oM21l7nVspyWqi6PVjFc3UHASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "bc1qw99ny6gz342g4apk9lu04qew6tmqlt34etdmxn",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkcwRAIgStClE4CXHdIV0zwxwWQwQue1gTKqnR+lMkKS2Q02jOECIGBC4tRwqmKwU+JlLJonV7Qotc6yPn412r1ZB/QSWKgJASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "",
+   "signature": "AUHliBpzKVmrAxzQoUx5Y45wXiFlIatacDJY6j2JDHwLr750veArBpLxpmxxELV5rkARZ4Cx1SIuqveZdKGWBKqjAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "Hello World",
+   "signature": "AUHVlKVo84u4/qFenQnZcVHe/pfAh5eE4q1e1XmG9SphWTYlzCjROwVBTldg3rFvxigOK3vYw9MbFKW/87HD8AK/AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUEIkbkHNZtbx7LzkFPopH9DbcV35qKSqHgt5+yrVarw61tDeDJ2EBfbYJeBmPRRknA3xQylF74tZV1O5qKzYrk1AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHl76ztLa2Q5I9nkU9GpZCPGlr27GcRi8jNVTaAYyqnQCnckbu3Uk+A99nGGI4t81NKAWUKdBdfNwfJg39spcAjAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHZAJCmZ9m0+1bUJiYLhdF9l7TGC/6fwDcos4q1FIjCXps9CwchVUBSvooXBMDTm7zaLbuUXt2ZH+Twoa23o6Y5AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUEGm0ayfR40HNgRgCsHqB7msfiTlWyQnzzLsYTv8DLtl0+wMTBF22lykV89xaAMhFvjdpkcQL+I70A8PcDoEWWWAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUHQjgYlkF/dyUDBGSxqUTuE7JWHjIR4LiDZQHg8nC7NQhseOrrfYbA7ukjSEMkTNgGYaCXcwW7PzoPwrRkV+YzUAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "mainnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "bc1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8s8qt0jn",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUH3tQYvq5HQso/TIsBN6PNaoffkNM0N5JSRx5zQAIqRORpxLq1E1IqTJ84D86bBVTHGC+OU5OujwFYOAwKvPgyqAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "empty",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "",
+   "signature": "AkcwRAIgVf1yT/r6AlvqC8YCV4anC5sX5cOtJZLxx7yL8DdIFMoCIDlziKITitemwSsALxJ6I73Mbvo9l86nQ5G9ECNywkhGASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "ascii",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "Hello World",
+   "signature": "AkcwRAIgI8k3+HtKZr0ehbaW/7VyAfa8/yolFETSX2LY6hh87h8CICW/YlX2XM3i3v76MugsK1SFV3sTuyctyiR7uJGGUZZOASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v1",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgOHbW3CTtlr59dRStGWOo9T4ACmxswU1j83jxuKVXm0ICIEqIFiRc36ztq0xL6WjYeyBi2cr8nJahMynL7mZzieJwASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "asset v2",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgZJUhN7jdevr7uRr9qLtZQva5qXTiE4f9NlEEQw/dnRwCIELu7iN3+vS+hnq7bj0lQvczn/l6bj0P+yxvugWIGIPkASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "collection v1",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgPelA7asJg3Oaqkn92ggjreLSBqa4Y4xlM/CeCu1Z908CIEea66ZkJk31O/EOCFv/+O60bPsgFDMZZJyvgQG6QDA8ASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "publisher v0",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AkcwRAIgApZPD8cRvE9OzzQRtjd5EFuhmYEVnGIBDhy7Vm+gnX0CIH5EmefwTBcpuunwAxmJHhrqRm0jgN1/vq4VzB5QMX5uASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "multibyte",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AkcwRAIgRZ+HOIxVj82ly+70nyt2z7Swgq4ZCsIYpj7Rv9accb8CICKdGqlOxl2tXX0k3HXF1oM21l7nVspyWqi6PVjFc3UHASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2wpkh",
+   "name": "long",
+   "address": "tb1qw99ny6gz342g4apk9lu04qew6tmqlt34ndkgaq",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AkcwRAIgStClE4CXHdIV0zwxwWQwQue1gTKqnR+lMkKS2Q02jOECIGBC4tRwqmKwU+JlLJonV7Qotc6yPn412r1ZB/QSWKgJASEDe6z2QXC9r8dD2RjCZfViebEiS52u91bqGJEUdLDvT54=",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "empty",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "",
+   "signature": "AUGaRfGjNdf3bNzGV5dHF7hgYomgOsjEtyll2YjF8nBBqhYJREK7r+Pu93GkJJA/mITJve4efdI4Ax375A3khJa0AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "ascii",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "Hello World",
+   "signature": "AUH+/ElGOUVEIATME6t0AIHmkMcUHYMvbpUFx14kwvPuDwxjRwkoShn/6zR5uAznFUFbqBWFnF+682tc4zzjblY9AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v1",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "RGBMap rgbmap-asset v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUG6Yw5Ejevzb3p0IAff8UJCPm1nhLU8iYZFydwIGrwov8tHQo76fWuHGhVkTLH1JuCNfwA4aA4ywTZCSF/SAQQ2AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "asset v2",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "RGBMap rgbmap-asset v2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUHYd4Lov0euZMlzzX5wRV2Ok7YcUawIabDdaMUwFcnUeWbeaF/vLwThireKI1r1WLP9+eSxnc+O5W67eAIRj5kDAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "collection v1",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "RGBMap rgbmap-collection v1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUFfEWt6SLu98xxAOaT65BCWJKfQYfq9FJ+9xqgx5xbBncGGqXnlVKeuoyl/Fe/33iJG1Dwnumv/q5dRycSX1oXdAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "publisher v0",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "RGBMap rgbmap-publisher v0 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "signature": "AUGm7B+xsYmugHPZ5PC37QlikV354vq+1TP7LeSUD2mE/n7nV1MEteIjICOzPeY4aPJvrAW/DEziUP3IfFStN0iXAQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "multibyte",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "café · ไทย · 🚀\nend",
+   "signature": "AUEHpdHYLQIgbO2At/bDeGGiabs63AiProvEOtvpRkthM4SGkFuv+CRR9JxDi8Sff/Fyh42SKhB/0Q/Uy51xyKN7AQ==",
+   "verifies": true
+  },
+  {
+   "key": 2,
+   "network": "testnet",
+   "kind": "p2tr",
+   "name": "long",
+   "address": "tb1p0zyjp63vm0qmddyxsewzqcdyzjpqhm0dvl7lq7xlwu5tr493km8ssgaqgu",
+   "message": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "signature": "AUG7e4ROERQpfjLeojPO0JaeSFHNJ3vNL0GMa+bTTipHj5aAjsz+Usrg2nvfgM5jXHUflEqie5HhyJDfEafSZigRAQ==",
+   "verifies": true
+  }
+ ],
+ "negative": [
+  {
+   "name": "signature from another key",
+   "address": "bc1ql3e9pgs3mmwuwrh95fecme0s0qtn2880lsvsd5",
+   "message": "",
+   "signature": "AkcwRAIgW7kgE0aYR28psEmJQq9sKSGX/CfB4uiC+AOsQE3mJ+0CIFFmgJ3mI0DljG5cpegsOCUOp1upzr4uyjgzB+e7mShwASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g="
+  },
+  {
+   "name": "signature over another message",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "not what was signed",
+   "signature": "AkcwRAIgW7kgE0aYR28psEmJQq9sKSGX/CfB4uiC+AOsQE3mJ+0CIFFmgJ3mI0DljG5cpegsOCUOp1upzr4uyjgzB+e7mShwASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5g="
+  },
+  {
+   "name": "one byte of the signature flipped",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "",
+   "signature": "AkcwRAIgW7kgE0aYR28psEmJQq9sKSGX/CfB4uiC+AOsQE3mJ+0CIFFmgJ3mI0DljG5cpegsOCUOp1upzr4uyjgzB+e7mShwASECeb5mfvncu6xVoGKVzocLBwKb/NstzijZWfKBWxb4F5k="
+  },
+  {
+   "name": "empty signature",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "",
+   "signature": ""
+  },
+  {
+   "name": "not base64",
+   "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4",
+   "message": "",
+   "signature": "not a signature"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "snapshots": [
+  {
+   "snapshotId": 4,
+   "network": "signet",
+   "at": 1700001000000,
+   "algorithm": "rgb-anchor-v1",
+   "ledgerSeq": 16,
+   "ledgerHash": "9c45a826a6fa999086bde1babf179a3ad16248cad115ea264dae8ddff36cc79a",
+   "liabilitiesRoot": "0b7653278d8d13712cbf2d6035656b2863cb25c9b89ddd45b6df3bdb208f4834",
+   "assetRoots": {
+    "rgb:synth-vector-alpha": {
+     "root": "4d1d678dca19c47b254e4210ea05127d9014d977eeee7a4494c514185753792e",
+     "total": "99800000000"
+    },
+    "rgb:synth-vector-beta": {
+     "root": "bfe8236003639f188630f70569720971d7a2c5850f91eb53b05c39eff3b1dc96",
+     "total": "21000000000"
+    },
+    "sats": {
+     "root": "68061ff86e9aad91865d937e42073fc0a6d745134a7460df05467d14c020551b",
+     "total": "1200000"
+    }
+   },
+   "leafCount": 16,
+   "liabilities": {
+    "rgb:synth-vector-alpha": "97500000000",
+    "rgb:synth-vector-beta": "21000000000",
+    "sats": "999454"
+   },
+   "reserves": {
+    "rgb:synth-vector-alpha": "99800000000",
+    "rgb:synth-vector-beta": "21000000000",
+    "sats": "1200000"
+   },
+   "coverage": {
+    "rgb:synth-vector-alpha": {
+     "liability": "97500000000",
+     "reserve": "99800000000",
+     "surplus": "2300000000",
+     "ok": true
+    },
+    "rgb:synth-vector-beta": {
+     "liability": "21000000000",
+     "reserve": "21000000000",
+     "surplus": "0",
+     "ok": true
+    },
+    "sats": {
+     "liability": "999454",
+     "reserve": "1200000",
+     "surplus": "200546",
+     "ok": true
+    }
+   },
+   "disclaimer": "BTC reserves are independently verifiable on-chain. RGB asset reserves are self-attested by this platform and are NOT independently verified: verification would require consignments, which carry the private state.",
+   "anchorState": "CONFIRMED",
+   "anchorTxid": "24198a4366286b18eef1d7480841ea17e02e64facf5640a286c8172f9c0df078",
+   "confirmedHeight": 10104,
+   "commitment": "011247c0001465d3272e8b7ebdc9daf19ead2f07e66d08014926e9ece8339736"
+  },
+  {
+   "snapshotId": 7,
+   "network": "signet",
+   "at": 1700002000000,
+   "algorithm": "rgb-anchor-v1",
+   "ledgerSeq": 32,
+   "ledgerHash": "5b248aa27bd037303232b9928c2fd28964740f4f5d46d2a9a47266647a801464",
+   "liabilitiesRoot": "de62a8dbed7a07975097c10da0e429231dcaa52477a8ec7b9ccfb6cd61b5da25",
+   "assetRoots": {
+    "rgb:synth-vector-alpha": {
+     "root": "25e689f6934aeaae54c7a4d71f59c370d64492d65cfcd11817a1f5f0a078b43c",
+     "total": "99800000000"
+    },
+    "rgb:synth-vector-beta": {
+     "root": "3c0dec67ba7e1c867387c05ab4d69aef69b6bcb56b6915b8d2c8d4401a219803",
+     "total": "21000000000"
+    },
+    "sats": {
+     "root": "7aa7fa3d4cf2532d8583660741b51f5acc42db2f0db1eb354f3968c2b261131b",
+     "total": "1200000"
+    }
+   },
+   "leafCount": 32,
+   "liabilities": {
+    "rgb:synth-vector-alpha": "97500000000",
+    "rgb:synth-vector-beta": "21000000000",
+    "sats": "999454"
+   },
+   "reserves": {
+    "rgb:synth-vector-alpha": "99800000000",
+    "rgb:synth-vector-beta": "21000000000",
+    "sats": "1200000"
+   },
+   "coverage": {
+    "rgb:synth-vector-alpha": {
+     "liability": "97500000000",
+     "reserve": "99800000000",
+     "surplus": "2300000000",
+     "ok": true
+    },
+    "rgb:synth-vector-beta": {
+     "liability": "21000000000",
+     "reserve": "21000000000",
+     "surplus": "0",
+     "ok": true
+    },
+    "sats": {
+     "liability": "999454",
+     "reserve": "1200000",
+     "surplus": "200546",
+     "ok": true
+    }
+   },
+   "disclaimer": "BTC reserves are independently verifiable on-chain. RGB asset reserves are self-attested by this platform and are NOT independently verified: verification would require consignments, which carry the private state.",
+   "anchorState": "CONFIRMED",
+   "anchorTxid": "0953ad98f3f1782e443e1aab57ee6cb9c66c6126aff75fb86dc32a4e8089907f",
+   "confirmedHeight": 10190,
+   "commitment": "a13912d0b7d7fe4c4bed9c248dbffc9fe5325b1aa8c3cb6c481fef36f4c6c786"
+  }
+ ],
+ "limit": 500,
+ "nextCursor": null
+}
