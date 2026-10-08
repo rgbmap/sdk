@@ -88,8 +88,8 @@ export async function checkDeclaration(declaration) {
 }
 
 /**
- * What every media list has to satisfy: a digest, a durable location, a known role, and a
- * size within that role's allowance (https://rgbmap.org/docs/media).
+ * What every media list has to satisfy: a digest, a known role, and a size within that
+ * role's allowance (https://rgbmap.org/docs/media).
  *
  * 🚨 `bytes` is checked here against what the declaration claims, which only binds the
  * issuer to a number. Whoever fetches the file checks the digest, and that is what decides.
@@ -100,9 +100,12 @@ function mediaProblems(media, roles) {
     let total = 0;
     for (const item of media || []) {
         if (!item.sha256) problems.push('a media item has no sha256');
-        // Reachable by content, not only by location.
-        if (!(item.locations || []).some((l) => String(l).startsWith('ar://') || String(l).includes('arweave'))) {
-            problems.push('a media item has no Arweave location');
+        // A location list is optional and any source will do. The digest is the promise;
+        // where the bytes can be fetched is the issuer's to arrange, and a declaration may
+        // carry a digest alone — the bytes committed elsewhere, delivered another way.
+        if (item.locations !== undefined
+            && (!Array.isArray(item.locations) || item.locations.some((l) => typeof l !== 'string' || !l))) {
+            problems.push('media locations are not a list of strings');
         }
         const limit = MEDIA_LIMITS[item.role];
         if (!roles.includes(item.role)) {

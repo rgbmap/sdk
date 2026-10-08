@@ -64,9 +64,13 @@ test('a manifest that disagrees with the ledger is invalid', async () => {
     assert.match(bad.problems[0], /the ledger records REAL/);
 });
 
-test('media has to name an Arweave location and a digest', async () => {
-    const d = await signed({ media: [{ role: 'logo', mime: 'image/png', sha256: 'aa', locations: ['https://example.org/logo.png'] }] });
-    assert.match(checkBinding(d).problems.join(';'), /Arweave location/);
+test('media is a digest; a location list is optional and any source', async () => {
+    const digestOnly = await signed({ media: [{ role: 'logo', mime: 'image/png', sha256: 'aa' }] });
+    assert.deepEqual(checkBinding(digestOnly).problems, []);
+    const ownHost = await signed({ media: [{ role: 'logo', mime: 'image/png', sha256: 'aa', locations: ['https://example.org/logo.png'] }] });
+    assert.deepEqual(checkBinding(ownHost).problems, []);
+    const bareList = await signed({ media: [{ role: 'logo', mime: 'image/png', sha256: 'aa', locations: 'https://example.org/logo.png' }] });
+    assert.match(checkBinding(bareList).problems.join(';'), /locations/);
 });
 
 test("only RGBMap's own address may publish a review, dispute or mark", async () => {
