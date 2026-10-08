@@ -22,6 +22,7 @@ export {
 } from './protocol/ledger.js';
 export { restoreEntry } from './protocol/objects.js';
 export { checkBinding, checkDeclaration, messageFor, signingDigest, STANDARDS } from './protocol/declaration.js';
+export { BATCH_STANDARD, BATCH_VERSION, batchMessage, batchRoot, checkBatch, checkEntry } from './protocol/batch.js';
 export { verify as verifyBip322 } from './protocol/bip322.js';
 
 /**
