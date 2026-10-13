@@ -179,3 +179,25 @@ test('a publisher declaration has to name the anchor address', async () => {
         'a ledger was claimed by a key that does not write its anchors',
     );
 });
+
+test('an item may carry the encrypted label, as true and under version 2', async () => {
+    assert.deepEqual(checkBinding(await nft({ encrypted: true, schema_type: 'UDA', media: [artwork(1000)] })).problems, []);
+    assert.match(checkBinding(await signed({ encrypted: true })).problems.join(';'), /encrypted needs standard_version 2/);
+});
+
+test('the encrypted label has one value', async () => {
+    for (const value of [false, 'true', 1]) {
+        assert.match(checkBinding(await nft({ encrypted: value })).problems.join(';'), /it is true or left out/);
+    }
+});
+
+test('the encrypted label is for a UDA', async () => {
+    assert.match(checkBinding(await nft({ encrypted: true, schema_type: 'NIA' })).problems.join(';'), /encrypted is for a UDA/);
+});
+
+test('a collection may carry the encrypted label', async () => {
+    const ok = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], encrypted: true });
+    assert.deepEqual(checkBinding(ok).problems, []);
+    const bad = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], encrypted: 'yes' });
+    assert.match(checkBinding(bad).problems.join(';'), /it is true or left out/);
+});

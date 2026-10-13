@@ -122,6 +122,17 @@ function mediaProblems(media, roles) {
     return problems;
 }
 
+/**
+ * `encrypted: true` is the issuer's label on an item or a collection: shown as theirs, never
+ * checked against the file it is about (https://rgbmap.org/docs/udas-and-collections#an-encrypted-item).
+ * Its one value is `true`; a declaration without it says nothing either way. Whether the
+ * genesis attaches a file for the label to be about is checked by whoever holds the genesis.
+ */
+function encryptedProblems(declaration) {
+    if (declaration.encrypted === undefined || declaration.encrypted === true) return [];
+    return [`encrypted is ${JSON.stringify(declaration.encrypted)}; it is true or left out`];
+}
+
 /** Per-standard rules that go beyond the signature. */
 export function checkBinding(declaration, context = {}) {
     const problems = [];
@@ -145,7 +156,7 @@ export function checkBinding(declaration, context = {}) {
         // 🚨 A v1 reader ignores fields it does not know. Carrying them under v1 would mean
         // the same bytes say different things to two readers, so it is refused outright.
         if (!v2) {
-            for (const field of ['collection', 'traits']) {
+            for (const field of ['collection', 'traits', 'encrypted']) {
                 if (declaration[field] !== undefined) problems.push(`${field} needs standard_version 2`);
             }
             for (const item of declaration.media || []) {
@@ -156,6 +167,11 @@ export function checkBinding(declaration, context = {}) {
             const { id, serial } = declaration.collection || {};
             if (!/^[0-9a-f]{64}$/.test(String(id))) problems.push('collection.id is not a sha256');
             if (!Number.isInteger(serial) || serial < 0) problems.push('collection.serial is not a whole number');
+        }
+        problems.push(...encryptedProblems(declaration));
+        if (declaration.encrypted !== undefined && declaration.schema_type
+            && String(declaration.schema_type).toUpperCase() !== 'UDA') {
+            problems.push('encrypted is for a UDA');
         }
         if (declaration.traits !== undefined) {
             if (!Array.isArray(declaration.traits)) problems.push('traits is not a list');
@@ -178,6 +194,7 @@ export function checkBinding(declaration, context = {}) {
         const size = declaration.declared_size;
         if (!Number.isInteger(size) || size < 0) problems.push('declared_size is not a whole number');
         problems.push(...mediaProblems(declaration.media, COLLECTION_ROLES));
+        problems.push(...encryptedProblems(declaration));
     }
 
     if (declaration.standard === 'rgbmap-publisher') {
