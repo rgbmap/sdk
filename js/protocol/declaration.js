@@ -133,6 +133,21 @@ function confidentialProblems(declaration) {
     return [`confidential is ${JSON.stringify(declaration.confidential)}; it is true or left out`];
 }
 
+/**
+ * Collections and UDAs register on RGB 0.11.1 only; 0.12 is accepted for fungible assets.
+ * An asset manifest counts as a UDA by its `schema_type`, or by claiming a collection, since
+ * every collection is on 0.11.1. Whoever holds the genesis also checks its schema.
+ */
+export const UDA_PROTOCOL_VERSION = '0.11.1';
+function versionProblems(declaration) {
+    const version = declaration.rgb_protocol_version;
+    if (version === UDA_PROTOCOL_VERSION) return [];
+    if (declaration.standard === 'rgbmap-collection') return [`a collection registers on RGB ${UDA_PROTOCOL_VERSION}`];
+    if (String(declaration.schema_type ?? '').toUpperCase() === 'UDA') return [`a UDA registers on RGB ${UDA_PROTOCOL_VERSION}`];
+    if (declaration.collection !== undefined) return [`a collection member registers on RGB ${UDA_PROTOCOL_VERSION}`];
+    return [];
+}
+
 /** Per-standard rules that go beyond the signature. */
 export function checkBinding(declaration, context = {}) {
     const problems = [];
@@ -142,6 +157,7 @@ export function checkBinding(declaration, context = {}) {
         if (!declaration.contract_id) problems.push('no contract_id');
         if (!declaration.network) problems.push('no network');
         if (!['0.11.1', '0.12'].includes(declaration.rgb_protocol_version)) problems.push('unknown rgb_protocol_version');
+        problems.push(...versionProblems(declaration));
         // 🚨 A ledger entry decides name, ticker and precision. A manifest that disagrees
         // with the genesis data is invalid, not a second opinion.
         for (const field of ['name', 'ticker', 'precision']) {
@@ -189,6 +205,7 @@ export function checkBinding(declaration, context = {}) {
     if (declaration.standard === 'rgbmap-collection') {
         if (!declaration.network) problems.push('no network');
         if (!['0.11.1', '0.12'].includes(declaration.rgb_protocol_version)) problems.push('unknown rgb_protocol_version');
+        problems.push(...versionProblems(declaration));
         if (!declaration.name) problems.push('no name');
         // 0 says "not declared". Anything else is a claim the index will count against.
         const size = declaration.declared_size;

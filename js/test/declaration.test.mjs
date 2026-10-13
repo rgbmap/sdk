@@ -201,3 +201,12 @@ test('a collection may carry the confidential label', async () => {
     const bad = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], confidential: 'yes' });
     assert.match(checkBinding(bad).problems.join(';'), /it is true or left out/);
 });
+
+test('collections and UDAs register on 0.11.1; fungible assets may use 0.12', async () => {
+    const col = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], rgb_protocol_version: '0.12' });
+    assert.match(checkBinding(col).problems.join(';'), /a collection registers on RGB 0.11.1/);
+    assert.match(checkBinding(await nft({ schema_type: 'UDA', rgb_protocol_version: '0.12' })).problems.join(';'), /a UDA registers on RGB 0.11.1/);
+    assert.match(checkBinding(await signed({ standard_version: '2', collection: { id: 'b'.repeat(64), serial: 1 }, rgb_protocol_version: '0.12' })).problems.join(';'), /a collection member registers on RGB 0.11.1/);
+    assert.deepEqual(checkBinding(await signed({ schema_type: 'NIA', rgb_protocol_version: '0.12' })).problems, []);
+    assert.deepEqual(checkBinding(await nft({ schema_type: 'UDA' })).problems, []);
+});
