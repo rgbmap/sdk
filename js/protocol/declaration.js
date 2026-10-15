@@ -123,14 +123,14 @@ function mediaProblems(media, roles) {
 }
 
 /**
- * `confidential: true` is the issuer's label on an item or a collection: shown as theirs, never
- * checked against the file it is about (https://rgbmap.org/docs/udas-and-collections#a-confidential-item).
+ * `private: true` is the issuer's label on an item or a collection: shown as theirs, never
+ * checked against the file it is about (https://rgbmap.org/docs/udas-and-collections#a-private-item).
  * Its one value is `true`; a declaration without it says nothing either way. Whether the
  * genesis attaches a file for the label to be about is checked by whoever holds the genesis.
  */
-function confidentialProblems(declaration) {
-    if (declaration.confidential === undefined || declaration.confidential === true) return [];
-    return [`confidential is ${JSON.stringify(declaration.confidential)}; it is true or left out`];
+function privateProblems(declaration) {
+    if (declaration.private === undefined || declaration.private === true) return [];
+    return [`private is ${JSON.stringify(declaration.private)}; it is true or left out`];
 }
 
 /**
@@ -172,7 +172,7 @@ export function checkBinding(declaration, context = {}) {
         // 🚨 A v1 reader ignores fields it does not know. Carrying them under v1 would mean
         // the same bytes say different things to two readers, so it is refused outright.
         if (!v2) {
-            for (const field of ['collection', 'traits', 'confidential']) {
+            for (const field of ['collection', 'traits', 'private']) {
                 if (declaration[field] !== undefined) problems.push(`${field} needs standard_version 2`);
             }
             for (const item of declaration.media || []) {
@@ -184,10 +184,10 @@ export function checkBinding(declaration, context = {}) {
             if (!/^[0-9a-f]{64}$/.test(String(id))) problems.push('collection.id is not a sha256');
             if (!Number.isInteger(serial) || serial < 0) problems.push('collection.serial is not a whole number');
         }
-        problems.push(...confidentialProblems(declaration));
-        if (declaration.confidential !== undefined && declaration.schema_type
+        problems.push(...privateProblems(declaration));
+        if (declaration.private !== undefined && declaration.schema_type
             && String(declaration.schema_type).toUpperCase() !== 'UDA') {
-            problems.push('confidential is for a UDA');
+            problems.push('private is for a UDA');
         }
         if (declaration.traits !== undefined) {
             if (!Array.isArray(declaration.traits)) problems.push('traits is not a list');
@@ -211,7 +211,7 @@ export function checkBinding(declaration, context = {}) {
         const size = declaration.declared_size;
         if (!Number.isInteger(size) || size < 0) problems.push('declared_size is not a whole number');
         problems.push(...mediaProblems(declaration.media, COLLECTION_ROLES));
-        problems.push(...confidentialProblems(declaration));
+        problems.push(...privateProblems(declaration));
     }
 
     if (declaration.standard === 'rgbmap-publisher') {

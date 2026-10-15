@@ -180,25 +180,25 @@ test('a publisher declaration has to name the anchor address', async () => {
     );
 });
 
-test('an item may carry the confidential label, as true and under version 2', async () => {
-    assert.deepEqual(checkBinding(await nft({ confidential: true, schema_type: 'UDA', media: [artwork(1000)] })).problems, []);
-    assert.match(checkBinding(await signed({ confidential: true })).problems.join(';'), /confidential needs standard_version 2/);
+test('an item may carry the private label, as true and under version 2', async () => {
+    assert.deepEqual(checkBinding(await nft({ private: true, schema_type: 'UDA', media: [artwork(1000)] })).problems, []);
+    assert.match(checkBinding(await signed({ private: true })).problems.join(';'), /private needs standard_version 2/);
 });
 
-test('the confidential label has one value', async () => {
+test('the private label has one value', async () => {
     for (const value of [false, 'true', 1]) {
-        assert.match(checkBinding(await nft({ confidential: value })).problems.join(';'), /it is true or left out/);
+        assert.match(checkBinding(await nft({ private: value })).problems.join(';'), /it is true or left out/);
     }
 });
 
-test('the confidential label is for a UDA', async () => {
-    assert.match(checkBinding(await nft({ confidential: true, schema_type: 'NIA' })).problems.join(';'), /confidential is for a UDA/);
+test('the private label is for a UDA', async () => {
+    assert.match(checkBinding(await nft({ private: true, schema_type: 'NIA' })).problems.join(';'), /private is for a UDA/);
 });
 
-test('a collection may carry the confidential label', async () => {
-    const ok = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], confidential: true });
+test('a collection may carry the private label', async () => {
+    const ok = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], private: true });
     assert.deepEqual(checkBinding(ok).problems, []);
-    const bad = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], confidential: 'yes' });
+    const bad = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], private: 'yes' });
     assert.match(checkBinding(bad).problems.join(';'), /it is true or left out/);
 });
 
