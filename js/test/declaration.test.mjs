@@ -195,24 +195,6 @@ test('the private label is for a UDA', async () => {
     assert.match(checkBinding(await nft({ private: true, schema_type: 'NIA' })).problems.join(';'), /private is for a UDA/);
 });
 
-const privatePart = (over = {}) => ({ role: 'private', mime: 'application/octet-stream', sha256: 'cc', bytes: 300_000, locations: AR, ...over });
-
-test('a private item may name where its private part is kept', async () => {
-    assert.deepEqual(checkBinding(await nft({ private: true, media: [artwork(1000), privatePart()] })).problems, []);
-});
-
-test('a private part entry needs the label, version 2 and a location', async () => {
-    assert.match(checkBinding(await nft({ media: [privatePart()] })).problems.join(';'), /media role private needs private: true/);
-    assert.match(checkBinding(await signed({ media: [privatePart()] })).problems.join(';'), /media role private needs standard_version 2/);
-    assert.match(checkBinding(await nft({ private: true, media: [privatePart({ locations: undefined })] })).problems.join(';'), /media private has no location/);
-    assert.match(checkBinding(await nft({ private: true, media: [privatePart({ bytes: 33_554_433 })] })).problems.join(';'), /private is 33554433 bytes, over 33554432/);
-});
-
-test('a collection cover may not be a private part', async () => {
-    const d = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 0, media: [privatePart()] });
-    assert.match(checkBinding(d).problems.join(';'), /media role private is not one of logo, preview/);
-});
-
 test('a collection may carry the private label', async () => {
     const ok = await signed({ standard: 'rgbmap-collection', name: 'Hermit', declared_size: 5, media: [], private: true });
     assert.deepEqual(checkBinding(ok).problems, []);

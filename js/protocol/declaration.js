@@ -31,8 +31,6 @@ export const MEDIA_LIMITS = {
     preview: 262_144,
     artwork: 524_288,
     original: 33_554_432,
-    // The private part of a private item, kept where the issuer chose. Never hosted by RGBMap.
-    private: 33_554_432,
 };
 const MEDIA_TOTAL_BYTES = 67_108_864;
 // A cover is shown at preview size; nothing needs the artwork allowance.
@@ -127,12 +125,8 @@ function mediaProblems(media, roles) {
 /**
  * `private: true` is the issuer's label on an item or a collection: shown as theirs, never
  * checked against the file it is about (https://rgbmap.org/docs/udas-and-collections#a-private-item).
- * Its one value is `true`; a declaration without it says nothing either way.
- *
- * The label is about a private part, in one of two places: a file the genesis attaches, or a
- * `private` media entry naming where the issuer keeps it. How it is encrypted, where its key
- * is and how a holder reads it are the issuer's. Whether the genesis attaches a file is
- * checked by whoever holds the genesis.
+ * Its one value is `true`; a declaration without it says nothing either way. Whether the
+ * genesis attaches a file for the label to be about is checked by whoever holds the genesis.
  */
 function privateProblems(declaration) {
     if (declaration.private === undefined || declaration.private === true) return [];
@@ -182,14 +176,8 @@ export function checkBinding(declaration, context = {}) {
                 if (declaration[field] !== undefined) problems.push(`${field} needs standard_version 2`);
             }
             for (const item of declaration.media || []) {
-                if (['artwork', 'private'].includes(item.role)) problems.push(`media role ${item.role} needs standard_version 2`);
+                if (item.role === 'artwork') problems.push(`media role ${item.role} needs standard_version 2`);
             }
-        }
-        for (const item of declaration.media || []) {
-            if (item?.role !== 'private') continue;
-            if (declaration.private !== true) problems.push('media role private needs private: true');
-            // RGBMap never holds it, so the entry has to say where it is.
-            if (!Array.isArray(item.locations) || !item.locations.length) problems.push('media private has no location');
         }
         if (declaration.collection !== undefined) {
             const { id, serial } = declaration.collection || {};
